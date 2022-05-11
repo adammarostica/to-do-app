@@ -1,6 +1,6 @@
 // query DOM for form element
 const form = document.querySelector('form');
-console.log(form);
+const toDoList = document.querySelector('ul');
 
 // add a submit event listener on the form
 form.addEventListener('submit', function(e) {
@@ -36,11 +36,19 @@ form.addEventListener('submit', function(e) {
 	
 });
 
-// add the li element to the ul
-const toDoList = document.querySelector('ul');
 toDoList.addEventListener('click', function(e) {
-	console.log(e);
-	// clicking on a task allows you to toggle between checked/unchecked (AKA done vs not done)
+	
+	if (e.target.localName === 'li') {
+		e.target.firstChild.classList.toggle('fa-square');
+		e.target.firstChild.classList.toggle('fa-square-check');
+		e.target.classList.toggle('text-muted');
+	}
+	// if we click on the icon, toggle between checked and unchecked
+	if (e.target.localName === 'i') {
+		e.target.classList.toggle('fa-square');
+		e.target.classList.toggle('fa-square-check');
+		e.target.parentElement.classList.toggle('text-muted');
+	}
 });
 
 

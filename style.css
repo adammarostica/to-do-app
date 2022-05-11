@@ -62,10 +62,29 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
       color: #ea593e;
     }
 
+    .fa-square {
+      transform: rotate(180deg);
+      transition: all .3s ease-out;
+    }
+
+    .fa-square-check {
+      transform: rotate(0deg);
+      transition: all .3s ease-out;
+    }
+
     li {
       margin-right: auto;
       display: flex;
       align-items: center;
+    }
+
+    .list-item--completed {
+      color: rgba(0,0,0,0.5);
+      text-decoration: line-through;
+    }
+
+    .list-item--completed > .fa-regular {
+      text-decoration: cornflowerblue;
     }
 
     li p {
