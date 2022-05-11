@@ -78,15 +78,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
       align-items: center;
     }
 
-    .list-item--completed {
-      color: rgba(0,0,0,0.5);
-      text-decoration: line-through;
-    }
-
-    .list-item--completed > .fa-regular {
-      text-decoration: cornflowerblue;
-    }
-
     li p {
       margin: 0 0 0 6px;
     }
